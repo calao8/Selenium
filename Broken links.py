@@ -2,10 +2,11 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 import requests
 
-
+# Gets the latest driver version for Chrome
 driver = webdriver.Chrome(ChromeDriverManager().install())
 
-driver.get("https://sandbox.divercity.io/")
+#URL of website
+driver.get("https://www.divercity.io/")
 
 #load page fully
 driver.implicitly_wait(3)
@@ -21,3 +22,5 @@ for links in footer_links:
 #status code 999 = LinkedIn Page
 #status code 403 = Broken links
 
+#End driver session
+driver.quit()
