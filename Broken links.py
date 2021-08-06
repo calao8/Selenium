@@ -1,8 +1,9 @@
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 import requests
 
 
-driver = webdriver.Chrome(executable_path= "C:\chromedriver.exe")
+driver = webdriver.Chrome(ChromeDriverManager().install())
 
 driver.get("https://sandbox.divercity.io/")
 
